@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        unity-version: ['2019.3.4f1-android']
+        unity-version: ['2019.3.4f1']
     
     steps:
     - uses: pCYSl5EDgo/setup-unity@master
