@@ -8,13 +8,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        unity-version:
-        - 2019.3.4f1-android
+        unity-version: ['2019.3.4f1']
     
     steps:
     - uses: pCYSl5EDgo/setup-unity@master
       with:
         unity-version: ${{ matrix.unity-version }}
+        has-android: 'true'
     - name: Create Manual Activation File
       run: /opt/Unity/Editor/Unity -quit -batchmode -nographics -logfile -createManualActivationFile || exit 0
     - name: Create Release
